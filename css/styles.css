@@ -668,6 +668,7 @@ ul {
   display: inline-flex;
 }
 .checkbox-text span {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 16px;

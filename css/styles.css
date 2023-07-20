@@ -413,7 +413,7 @@ ul {
 }
 
 .footer-subscribe-form {
-  display: inline-flex;
+  display: flex;
   gap: 24px;
 }
 .footer-input {
@@ -425,6 +425,10 @@ ul {
   padding: 8px 16px;
   background-color: transparent;
   color: var(--white);
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 .footer-input::placeholder {
   color: var(--white);
@@ -437,7 +441,6 @@ ul {
   padding: 8px 24px;
   justify-content: center;
   align-items: center;
-  gap: 16px;
   height: 40px;
   min-width: 165px;
   border: none;
@@ -445,6 +448,7 @@ ul {
 }
 .footer-btn-icon {
   fill: currentColor;
+  margin-left: 16px;
 }
 
 /* Portfolio page */
@@ -546,7 +550,7 @@ ul {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
@@ -594,7 +598,6 @@ ul {
   color: var(--navyblue-color);
   text-align: center;
   font-weight: 500;
-  margin-top: 48px;
   margin-bottom: 16px;
 }
 .modal-input {
@@ -615,13 +618,12 @@ ul {
   fill: var(--primary-brand-color);
 }
 
-/* .modal-form-btn:disabled {
-} */
 .input-wrapper {
   position: relative;
 }
 
 .modal-input-label {
+  display: block;
   color: var(--lightslate-color);
   font-size: 12px;
   line-height: 1.17;
@@ -636,10 +638,22 @@ ul {
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.textarea-field {
+  margin-bottom: 16px;
+}
+
+.modal-field.textarea-field,
+.modal-field.checkbox-field {
+  margin-bottom: 0;
+}
 .modal-textarea {
   height: 120px;
   padding: 8px 16px;
   resize: none;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--modal-overlay-color);
 }
 .modal-textarea::placeholder {
   color: var(--modal-overlay-color);
@@ -647,12 +661,15 @@ ul {
   line-height: 1.17;
   letter-spacing: 0.04em;
 }
+.checkbox-field {
+  margin-bottom: 24px;
+}
 .checkbox-text {
   display: inline-flex;
   align-items: center;
 }
 .checkbox-text span {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 16px;
@@ -661,6 +678,7 @@ ul {
   border: 1px solid var(--modal-overlay-color);
   margin-right: 8px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: transparent;
 }
@@ -684,4 +702,5 @@ ul {
   min-width: 169px;
   height: 56px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

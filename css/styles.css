@@ -661,12 +661,9 @@ ul {
   margin-bottom: 24px;
 }
 .checkbox-text {
-  display: inline-flex;
   align-items: center;
 }
-.modal-custom-checkbox {
-  display: inline-flex;
-}
+
 .checkbox-text span {
   display: inline-flex;
   align-items: center;
